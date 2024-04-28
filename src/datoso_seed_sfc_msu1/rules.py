@@ -10,15 +10,15 @@ rules = [
             {
                 'key': 'name',
                 'operator': 'contains',
-                'value': 'MSU1'
+                'value': 'MSU1',
             },
             {
                 'key': 'name',
                 'operator': 'contains',
-                'value': 'Super Famicom'
-            }
-        ]
-    }
+                'value': 'Super Famicom',
+            },
+        ],
+    },
 ]
 
 

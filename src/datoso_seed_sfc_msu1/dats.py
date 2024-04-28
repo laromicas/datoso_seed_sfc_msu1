@@ -1,17 +1,18 @@
-"""
-    TranslatedEnglish Dat class to parse different types of dat files.
-"""
+"""TranslatedEnglish Dat class to parse different types of dat files."""
 import re
+
 from datoso.configuration import config
 from datoso.repositories.dat import XMLDatFile
 
+
 class SFCMSU1Dat(XMLDatFile):
-    """ Super Famicom Enhanced Colors Dat class. """
+    """Super Famicom Enhanced Colors Dat class."""
+
     seed: str = 'sfc_msu1'
 
     def initial_parse(self):
         # pylint: disable=R0801
-        """ Parse the dat file. """
+        """Parse the dat file."""
         name = self.name
 
         name_array = name.split(' - ')
@@ -23,16 +24,16 @@ class SFCMSU1Dat(XMLDatFile):
         self.overrides()
 
         if self.modifier or self.system_type:
-            self.preffix = config.get('PREFFIXES', self.modifier or self.system_type, fallback='')
+            self.prefix = config.get('PREFIXES', self.modifier or self.system_type, fallback='')
         else:
-            self.preffix = None
+            self.prefix = None
 
-        return [self.preffix, self.company, self.system, self.suffix, self.get_date()]
+        return [self.prefix, self.company, self.system, self.suffix, self.get_date()]
 
 
     def get_date(self):
-        """ Get the date from the dat file. """
+        """Get the date from the dat file."""
         if self.file:
-            result = re.findall(r'\(.*?\)', self.file)
+            result = re.findall(r'\(.*?\)', str(self.file))
             self.date = result[len(result)-1][1:-1]
         return self.date
