@@ -11,7 +11,7 @@ Super Famicom MSU1 - Enhancing audio of SNES games
 
 ## Installation
 
-Datoso requires python 3.10+.
+Datoso requires python 3.11+.
 
 Use pip (recommended to use a virtual environment):
 If you only need this plugin you can install it directly
