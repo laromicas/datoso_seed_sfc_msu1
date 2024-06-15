@@ -1,3 +1,4 @@
+"""Rules for the Super Famicom - MSU1 seed."""
 from datoso_seed_sfc_msu1.dats import SFCMSU1Dat
 
 rules = [
@@ -10,17 +11,18 @@ rules = [
             {
                 'key': 'name',
                 'operator': 'contains',
-                'value': 'MSU1'
+                'value': 'MSU1',
             },
             {
                 'key': 'name',
                 'operator': 'contains',
-                'value': 'Super Famicom'
-            }
-        ]
-    }
+                'value': 'Super Famicom',
+            },
+        ],
+    },
 ]
 
 
-def get_rules():
+def get_rules() -> list:
+    """Get the rules."""
     return rules
