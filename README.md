@@ -1,6 +1,6 @@
 ![Datoso](https://github.com/laromicas/datoso/blob/master/bearlogo.png)
 
-# Datoso Seed Super Famicom MSU1
+# Datoso Seed Super Famicom MSU1 (DEPRECATED - check datoso_seed_enhanced)
 
 Datoso is a WIP Python command line tool to download and organize your Dat Roms.
 As today the tool supports dat-omatic, redump, and translated-english dats.

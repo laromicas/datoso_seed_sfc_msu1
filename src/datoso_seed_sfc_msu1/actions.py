@@ -1,4 +1,5 @@
 """Actions for the sfc msu1 seed."""
+from datoso.configuration import logger
 from datoso_seed_sfc_msu1.dats import SFCMSU1Dat
 
 actions = {
@@ -23,4 +24,5 @@ actions = {
 
 def get_actions() -> dict:
     """Get the actions dictionary."""
+    logger.error('Deprecated, use datoso_seed_enhanced instead')
     return actions
